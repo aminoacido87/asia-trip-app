@@ -1,0 +1,11 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+  command = "npm run build"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Optional scheduled alert check, active on Netlify if env vars are set.
+[functions."check-alerts"]
+  schedule = "0 7 * * *"
